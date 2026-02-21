@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ FINANCETRACK // CYBER ⚡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ FINANCETRACK ⚡</h1>
+            <p>// CYBER MONEY MANAGEMENT SYSTEM //</p>
+        </div>
+
+        <div class="balance-section">
+            <div class="balance-card income">
+                <h3>Receitas</h3>
+                <div class="value" id="totalIncome">R$ 0,00</div>
+            </div>
+            <div class="balance-card expense">
+                <h3>Despesas</h3>
+                <div class="value" id="totalExpense">R$ 0,00</div>
+            </div>
+            <div class="balance-card total">
+                <h3>Saldo</h3>
+                <div class="value" id="balance">R$ 0,00</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Adicionar Transação</h2>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <input type="text" id="description" required placeholder="Ex: Salário, Aluguel, Mercado...">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="amount">Valor (R$)</label>
+                        <input type="number" id="amount" step="0.01" required placeholder="0,00">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Tipo</label>
+                        <select id="type" required>
+                            <option value="income">Receita</option>
+                            <option value="expense">Despesa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Data</label>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit" class="btn">Adicionar Transação</button>
+            </form>
+        </div>
+
+        <div class="transactions-section">
+            <h2>Histórico de Transações</h2>
+            <div id="transactionsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
